@@ -6,12 +6,14 @@ Feature: Layout verification
   Scenario: Main page layout verification
     Given user at the main page
     Then user see name of app "Play sample application — Computer database" in the header
-    And user see amount of "computers found"
+    And user see amount of found computers
     And user see input field with placeholder "Filter by computer name..."
     And user see button "Filter by name"
-    And user see "Add a new computer" button
-    And User see table with 4 columns : Name, Introduced/Discontinued Date, Company
-    And user see "pagination" block
+    And user see button "Add a new computer" 
+    And user see pagination block
+    And User see table with 4 columns:
+    | Name | Introduced | Discontinued | Company |
+    
 
   Scenario: Add page layout verification
     Given user at the main page

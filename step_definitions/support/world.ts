@@ -1,5 +1,3 @@
-import { setWorldConstructor } from "cucumber";
+import { setWorldConstructor } from 'cucumber';
 
-export const World = function() {
-  setWorldConstructor(World);
-};
+export const WORLD = () =>  setWorldConstructor(WORLD);

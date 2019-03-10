@@ -1,33 +1,36 @@
 {
-    "name": "protractor-cucumber-ts",
-    "version": "0.0.1",
-    "description": "Test project",
-    "repository": "https://github.com/serhiisobur/protractor-cucumber-ts",
-    "license": "MIT",
-    "devDependencies": {
-        "@types/chai": "^4.1.7",
-        "@types/cucumber": "^4.0.5",
-        "@types/node": "^11.11.0",
-        "@types/protractor": "^4.0.0",
-        "chai": "^4.2.0",
-        "cucumber": "^5.1.0",
-        "prettier": "1.16.4",
-        "protractor": "^5.4.2",
-        "protractor-cucumber-framework": "^6.1.1",
-        "tslint": "^5.13.1",
-        "typescript": "^3.3.3"
-    },
-    "scripts": {
-        "format": "prettier --write '{pageObjects,step_definitions}/**/*.ts'",
-        "format:check": "prettier --list-different '{apps,libs}/**/*.ts'",
-        "pretest": "npm run tsc && npm run wd-update && npm run wd-start",
-        "test": "protractor tmp/configs/protractor.conf.js",
-        "posttest": "npm run wd-stop",
-        "tsc": "tsc",
-        "wd-update": "webdriver-manager update --gecko false",
-        "wd-start": "webdriver-manager start --detach",
-        "wd-status": "webdriver-manager status",
-        "wd-clean": "webdriver-manager clean",
-        "wd-stop": "webdriver-manager shutdown"
-    }
+  "name": "protractor-cucumber-ts",
+  "version": "0.0.1",
+  "description": "Test project",
+  "repository": "https://github.com/serhiisobur/protractor-cucumber-ts",
+  "license": "MIT",
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/cucumber": "^4.0.5",
+    "@types/node": "^11.11.0",
+    "@types/protractor": "^4.0.0",
+    "chai": "^4.2.0",
+    "cucumber": "^5.1.0",
+    "protractor": "^5.4.2",
+    "protractor-cucumber-framework": "^6.1.1",
+    "typescript": "^3.3.3"
+  },
+  "devDependencies": {
+    "prettier": "1.16.4",
+    "tslint": "^5.13.1",
+    "tslint-eslint-rules": "^5.4.0"
+  },
+  "scripts": {
+    "format": "prettier --write '{pageObjects,step_definitions}/**/*.ts'",
+    "format:check": "prettier --list-different '{apps,libs}/**/*.ts'",
+    "pretest": "npm run tsc && npm run wd-update && npm run wd-start",
+    "test": "protractor tmp/configs/protractor.conf.js",
+    "posttest": "npm run wd-stop",
+    "tsc": "tsc",
+    "wd-update": "webdriver-manager update --gecko false",
+    "wd-start": "webdriver-manager start --detach",
+    "wd-status": "webdriver-manager status",
+    "wd-clean": "webdriver-manager clean",
+    "wd-stop": "webdriver-manager shutdown"
+  }
 }

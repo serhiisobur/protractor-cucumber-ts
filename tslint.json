@@ -85,26 +85,6 @@
 			true,
 			"check-multiline-start"
 		],
-		"completed-docs": [
-			true,
-			{
-				"enums": true,
-				"classes": true,
-				"functions": true,
-				"methods": {
-					"privacies": [
-						"public",
-						"protected"
-					]
-				},
-				"properties": {
-					"privacies": [
-						"public",
-						"protected"
-					]
-				}
-			}
-		],
 		"no-redundant-jsdoc": true,
 		"arrow-parens": [
 			true,
