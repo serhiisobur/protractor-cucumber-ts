@@ -10,7 +10,7 @@ Feature: Layout verification
     And user see input field with placeholder "Filter by computer name..."
     And user see button "Filter by name"
     And user see "Add a new computer" button
-  #  And User see table with 4 columns : Name, Introduced/Discontinued Date, Company
+    And User see table with 4 columns : Name, Introduced/Discontinued Date, Company
     And user see "pagination" block
 
   Scenario: Add page layout verification
