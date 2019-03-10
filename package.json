@@ -5,6 +5,10 @@
     "repository": "https://github.com/serhiisobur/protractor-cucumber-ts",
     "license": "MIT",
     "devDependencies": {
+        "@types/chai": "^4.1.7",
+        "@types/cucumber": "^4.0.5",
+        "@types/node": "^11.11.0",
+        "@types/protractor": "^4.0.0",
         "chai": "^4.2.0",
         "cucumber": "^5.1.0",
         "prettier": "1.16.4",
@@ -14,12 +18,16 @@
         "typescript": "^3.3.3"
     },
     "scripts": {
-        "format": "npx prettier --write \"{pageObjects,step_definitions}/**/*.ts\"",
-        "format:check": "npx prettier --list-different \"{apps,libs}/**/*.ts\"",
-        "wd-update": "node ./node_modules/protractor/bin/webdriver-manager update",
-        "wd-start": "node ./node_modules/protractor/bin/webdriver-manager start",
+        "format": "prettier --write '{pageObjects,step_definitions}/**/*.ts'",
+        "format:check": "prettier --list-different '{apps,libs}/**/*.ts'",
+        "pretest": "npm run tsc && npm run wd-update && npm run wd-start",
+        "test": "protractor tmp/configs/protractor.conf.js",
+        "posttest": "npm run wd-stop",
+        "tsc": "tsc",
+        "wd-update": "webdriver-manager update --gecko false",
+        "wd-start": "webdriver-manager start --detach",
         "wd-status": "webdriver-manager status",
         "wd-clean": "webdriver-manager clean",
-        "test": "protractor configs/protractor.conf.ts"
+        "wd-stop": "webdriver-manager shutdown"
     }
 }
