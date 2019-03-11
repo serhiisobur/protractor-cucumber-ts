@@ -16,12 +16,14 @@
     "typescript": "^3.3.3"
   },
   "devDependencies": {
+    "@types/signale": "^1.2.1",
     "prettier": "1.16.4",
+    "signale": "^1.4.0",
     "tslint": "^5.13.1",
     "tslint-eslint-rules": "^5.4.0"
   },
   "scripts": {
-    "format": "prettier --write '{pageObjects,step_definitions}/**/*.ts'",
+    "format": "prettier --write '{pageObjects,step_definitions,utils}/**/*.ts'",
     "format:check": "prettier --list-different '{apps,libs}/**/*.ts'",
     "pretest": "npm run tsc && npm run wd-update && npm run wd-start",
     "test": "protractor tmp/configs/protractor.conf.js",
