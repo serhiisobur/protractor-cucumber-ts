@@ -3,13 +3,10 @@ Feature: Canceling computer creation
   I could cancel computer creation
 
   Scenario: Cancel computer creation
-    Given App is opened
+    Given user at the main page
     When user click 'Add new computer' button
     And user input to fields:
-      | Name              | SuperComp  |
-      | Introduced date   | 2005-12-12 |
-      | Discontinued date | 2017-05-05 |
-      | Company name      | Sony       |
-    And click 'Cancel' button
+      | Name      | Introduced date | Discontinued date | Company name |
+      | SuperComp | 2005-12-12      | 2017-05-05        | Sony         |
+    And user click 'Cancel' button
     Then user is redirected to main page
-    And see No Notification message

@@ -1,7 +1,7 @@
 // tslint:disable:no-unused-expression
 import { expect } from 'chai';
 import { ElementFinder } from 'protractor';
-import { MainPage } from '../../pageObjects/mainPage';
+import { MainPage } from '../../pageObjects/main.pageObject';
 import { CommonSteps } from '../common.steps';
 import { REGEXPS } from './../../data/testData';
 const page = new MainPage();

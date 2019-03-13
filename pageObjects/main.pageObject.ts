@@ -1,7 +1,7 @@
 import { $, $$, browser, by, element, ElementArrayFinder, ElementFinder } from 'protractor';
 
 export class MainPage {
-	private addButton: ElementFinder = $('.success');
+	private addButton: ElementFinder = $('[id="add"]');
 	private deleteButton: ElementFinder = $('.btn.danger');
 	private filterButton: ElementFinder = element(by.id('searchsubmit'));
 	private header: ElementFinder = $('.fill');
